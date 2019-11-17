@@ -9,7 +9,7 @@ Notice that the 'add_action' line ends with '101'? This guarantees that the chil
 
 function bst_child_enqueues() {
 
-	wp_register_style('bst-child', get_bloginfo('stylesheet_directory') . '/css/bst-child.css', false, null);
+	wp_register_style('bst-child', get_bloginfo('stylesheet_directory') . '/css/styles.css', false, null);
 	wp_enqueue_style('bst-child');
 
   /* Enqueue your own styles and scripts in here */
