@@ -5,7 +5,7 @@
     
     <div class="col-xs-12 col-sm-8">
       <div id="content" role="main">
-				<?php get_template_part('loops/content', get_post_format()); ?>
+				<?php get_template_part('loops/index-loop', get_post_format()); ?>
       </div><!-- /#content -->
     </div>
     

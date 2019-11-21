@@ -119,10 +119,17 @@ span.allergen {
 header {
 	display: grid;
 	grid-template-columns: min-content 2fr 1.3fr;
+	@media (max-width: 768px) {
+		.name {
+			display: none;
+		}
+		
+	}
 }
 
-.name {
+.name { 
 	display: grid;
+	grid-column: span 1;
 	grid: repeat(2, 60px) / repeat(3, 60px);
 	font-family: Syncopate, sans-serif;
 	font-weight: 700;
@@ -137,12 +144,11 @@ header {
 			$black 5px,
 			transparent 5px,
 			transparent 10px);
-
-	@media (min-width: 550px) {
-		grid-column: span 1;
-		background: $black;
-	}
-
+	
+	 @media (min-width: 768px) {
+			grid-column: span 1;
+			background: $black;
+	} 
 	span {
 		padding-top: 0.5rem;
 
@@ -157,6 +163,38 @@ header {
 	}
 }
 
+.namehidden{
+	display: none;
+		@media (max-width: 768px) {
+			display: grid;
+			grid: repeat(2, 30px) / repeat(3, 30px);
+			font-family: Syncopate,
+			sans-serif;
+			font-weight: 700;
+			font-size: 1.0rem;
+			border: 6px solid $black;
+			border-width: 6px 6px 6px;
+			color: $yellow;
+			text-align: center;
+			grid-column: span 3;
+			background: $black;
+			background: repeating-linear-gradient(90deg,
+			$black 0px,
+			$black 5px,
+			transparent 5px,
+			transparent 10px);
+			span {
+				padding-top: 0.5rem;
+				&:nth-child(odd) {
+					background: $black;
+				}
+				&:nth-child(even) {
+					background: $yellow;
+					color: $black;
+				}
+			}
+		}
+}
 .opening-hours {
 	border: 6px solid $black;
 	border-width: 6px 6px 0;
@@ -169,8 +207,7 @@ header {
 	display: flex;
 	align-items: center;
 	line-height: 1.1;
-
-	@media (min-width: 550px) {
+	@media (min-width: 768px) {
 		grid-column: span 2;
 		border-width: 6px 6px 0 0;
 	}
@@ -221,12 +258,12 @@ header {
 
 .legend {
 	border: 6px solid $black;
-	border-width: 0 6px 6px 0;
-	background: repeating-linear-gradient(90deg,
+	border-width: 0 6px 6px 6px;
+	/*background: repeating-linear-gradient(90deg,
 			transparent 0px,
 			transparent 5px,
 			$black 5px,
-			$black 10px);
+			$black 10px);*/
 
 	@media (min-width: 880px) {
 		display: flex;
