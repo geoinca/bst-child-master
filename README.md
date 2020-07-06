@@ -14,7 +14,7 @@ Get BST here: [https://github.com/SimonPadbury/b4st](https://github.com/SimonPad
 
 **bst-child** contains the minimum requirement for a child theme based off **bst**.
 
-So far, all it has is an enqueue function for the linking the stylesheet `css/style.css`  
+So far, all it has is an enqueue function for the linking the stylesheet `css/styles.css`  
 
 -----
 
