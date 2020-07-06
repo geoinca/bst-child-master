@@ -1,19 +1,19 @@
 <?php get_template_part('header'); ?>
-
-<div class="container">
-  <div class="row">
-    
-    <div class="col-xs-12 col-sm-8">
-      <div id="content" role="main">
-				<?php get_template_part('loops/index-loop', get_post_format()); ?>
-      </div><!-- /#content -->
-    </div>
-    
-    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-       <?php get_template_part('sidebar'); ?>
-    </div>
-    
-  </div><!-- /.row -->
-</div><!-- /.container -->
-
+<main id="site-main"  class=" mt-5">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-12 col-sm-8">
+        <div id="content" role="main">
+          <?php get_template_part('loops/index-loop', get_post_format()); ?>
+        </div><!-- /#content -->
+      </div>
+      
+      <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+        <?php get_template_part('sidebar'); ?>
+      </div>
+      
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</main>
 <?php get_template_part('footer'); ?>
