@@ -1060,12 +1060,20 @@ a {
 ## main#site-main.mt-5
 --------------------------------------------------------------*/
 main#site-main.mt-5 {
-  border: 6px solid #04110f;
-  margin-top: 0rem !important; }
+  margin-top: 0rem !important;
+  border-left: 6px solid #04110f !important;
+  border-right: 6px solid #04110f !important;
+  border-bottom: 6px solid #04110f !important; }
 
 breadcrumbs#border-bottom {
   border-left: 6px solid #04110f !important;
   border-right: 6px solid #04110f !important; }
+
+headertitle {
+  display: inline-grid; }
+
+div.header-meta.my-5.border-top.border-bottom.py-3.text-center.text-muted {
+  font-size: 0.9rem; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
