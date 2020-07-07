@@ -11,7 +11,9 @@ gulp.task('default', function () {
 gulp.task('styles', function () {
     var processors = [
         autoprefixer({
-            browsers: ['last 3 versions', 'ie > 9']
+            overrideBrowserslist: [  'last 1 version',
+            '> 1%',
+            'ie 10']
         }),
         cssnano()
     ];
