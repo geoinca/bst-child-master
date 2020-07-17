@@ -1075,6 +1075,11 @@ headertitle {
 div.header-meta.my-5.border-top.border-bottom.py-3.text-center.text-muted {
   font-size: 0.9rem; }
 
+header#pagetitle {
+  display: block; }
+  header#pagetitle > h2 {
+    margin-top: 1.5rem; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1089,7 +1094,7 @@ div.header-meta.my-5.border-top.border-bottom.py-3.text-center.text-muted {
   display: block; }
 
 /*--------------------------------------------------------------
-# Media
+# Media xxx
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1122,7 +1127,7 @@ object {
   text-align: center; }
 
 /*--------------------------------------------------------------
-## Galleries
+## Galleries xxxx
 --------------------------------------------------------------*/
 .gallery {
   margin-bottom: 1.5em; }
@@ -1151,3 +1156,7 @@ object {
 
 .gallery-caption {
   display: block; }
+
+@media screen and (min-width: 1200px) {
+  .entry-content {
+    max-width: 100%; } }

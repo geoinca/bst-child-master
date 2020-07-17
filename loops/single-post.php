@@ -41,7 +41,7 @@
         ?></a>
       </div>
     </div>
-
+<!--singlepost -->
     <section class="entry-content">
       <?php
         the_post_thumbnail();
