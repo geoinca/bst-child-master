@@ -5,9 +5,8 @@
 
 
 
-<main id="site-main"
- class="mt-5">
-
+<main id="site-main"  class="mt-5">
+<!-- single -->
   
   <?php
   /*
@@ -21,7 +20,7 @@
   ?>
   <div class="entry-content">
     <div class="row"> 
-      <div class="col-sm">
+      <div class="col-sm col-sm-wpd">
         <div id="content" role="main">
           <?php get_template_part('loops/single-post', get_post_format()); ?>
         </div>

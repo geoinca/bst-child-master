@@ -11,7 +11,7 @@
 	* Dimox originals are still there as commented lines.
   */
 
-	function dimox_breadcrumbs() {
+	function dimox_breadcrumbs_child() {
 
 	/* === OPTIONS === */
 	$text['home']     = 'Home'; // text for the 'Home' link
@@ -23,12 +23,12 @@
 	$text['page']     = 'Page %s'; // text 'Page N'
 	$text['cpage']    = 'Comment Page %s'; // text 'Comment Page N'
 
-	$wrap_before    = '<div id="breadcrumbs" class="border-bottom bg-light"><div class="container"><nav aria-label="breadcrumb"><ol class="breadcrumb bg-light mb-0 px-0" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
+	$wrap_before    = '<div id="breadcrumbs" class="border-bottom6px bg-yellow"><div class="container"><nav aria-label="breadcrumb"><ol class="breadcrumb bg-yellow mb-0 px-0" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
 	//$wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
 	
 	//----b4st//
 	$wrap_after     = '</ol></nav></div></div><!-- .breadcrumb -->'; // the closing wrapper tag
-	$sep            = '<span class="px-2 text-muted"> / </span>'; // separator between crumbs
+	$sep            = '<span class="px-2 text-muted"> >> </span>'; // separator between crumbs
 	$before         = '<li class="breadcrumb-item active" aria-current="page">'; // tag before the current crumb
 	//----//
 	
@@ -41,7 +41,7 @@
 	$show_on_home   = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
 	
 	$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
-	$show_current   = 1; // 1 - show current page title, 0 - don't show
+	$show_current   = 0; // 1 - show current page title, 0 - don't show
 	$show_last_sep  = 1; // 1 - show last separator, when current page title is not displayed, 0 - don't show
 	/* === END OF OPTIONS === */
 

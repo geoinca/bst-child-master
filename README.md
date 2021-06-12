@@ -93,3 +93,50 @@ So far, all it has is an enqueue function for the linking the stylesheet `css/st
 * _Documentation on b4st theme hooks can be found in the [wiki](https://github.com/SimonPadbury/b4st/wiki/b4st-Theme-Hooks)._
 
 style base https://codepen.io/oliviale/pen/LYYrKMV
+
+# Development Folder Structure
+
+```
+version: "3.9"
+    
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8088:80
+    environment:
+      - PMA_HOST=db
+    depends_on:
+      - db
+      
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress:/var/www/html
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins
+      - ./wp-content/themes:/var/www/html/wp-content/themes
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+volumes:
+  db_data: {}
+  wordpress: {}
+```

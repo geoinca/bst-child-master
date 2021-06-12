@@ -1,4 +1,5 @@
 <?php get_template_part('header'); ?>
+<!-- index-->
 <main id="site-main"  class=" mt-5">
   <div class="container">
     <div class="row">

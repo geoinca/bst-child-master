@@ -1,5 +1,6 @@
 <?php get_template_part('header'); ?>
-<main id="site-main"  class=" mt-5">
+<!-- page -->
+<main id="site-main"  class="mt-5">
     <div class="container">
         <div class="row">
 

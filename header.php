@@ -49,5 +49,5 @@
 
         </div>
     </nav>
-
+<!-- b4st_navbar_after -->
     <?php b4st_navbar_after(); ?>
